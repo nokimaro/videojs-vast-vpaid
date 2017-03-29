@@ -278,6 +278,9 @@ VASTIntegrator.prototype._addClickThrough = function addClickThrough(mediaFile, 
 
       player.pause();
       tracker.trackClick();
+      
+      tracker.trackSkip();
+      player.trigger("vast.adSkip")
     };
 
     return blocker;
